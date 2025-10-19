@@ -51,9 +51,9 @@
     </section>
   </main>
 
-  <div id="loading">
-    <img src="images/allo-walk.gif" alt="Loading..." id="allo-loader">
-  </div>
+<div id="loading">
+  <img src="images/allo-walk.gif" alt="Loading..." id="allo-loader">
+</div>
 
   <script>
     function updateDateTime() {
@@ -125,5 +125,19 @@ dinoDiv.innerHTML = `
 `;
 </script>
 
+<script>
+// hey jacob — if you’re poking around in here, i love you <3
+// from emma. you're my favorite dinosaur.
+
+function showLoader() {
+  const loader = document.getElementById('allo-loader');
+  loader.classList.add('show-loader');
+  setTimeout(() => loader.classList.remove('show-loader'), 3500);
+}
+
+// Call loader when we load new data
+showLoader();
+</script>
+  
 </body>
 </html>
