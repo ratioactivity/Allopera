@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Allopera Sidebar</title>
+  <link rel="stylesheet" href="allopera.css" />
+</head>
+
+<body>
+  <div id="topbar">
+    <div class="top-left">
+      <img src="images/skull.png" alt="Allo Skull" id="skull-icon">
+      <div>
+        <h1>Jacob’s Opera Sidebar</h1>
+        <p id="date"></p>
+        <p id="time"></p>
+      </div>
+    </div>
+  </div>
+
+  <section id="banner">
+    <img src="images/ferns.jpg" id="fern-bg" alt="Jurassic Ferns">
+    <img src="images/allo-orange.png" id="allo-banner" alt="Allosaurus Banner">
+  </section>
+
+  <main>
+    <section id="dino">
+      <h2>Dinosaur of the Day</h2>
+      <div id="dino-info">
+        <p>Loading dinosaur...</p>
+      </div>
+    </section>
+
+    <section id="bookmarks">
+      <h2>Bookmarks</h2>
+      <div id="bookmark-list"></div>
+    </section>
+
+    <section id="notes">
+      <h2>Notes</h2>
+      <textarea id="note-area" placeholder="Write your Jurassic thoughts..."></textarea>
+    </section>
+
+    <section id="twitch">
+      <h2>Twitch Stats</h2>
+      <div id="twitch-info">
+        <p>Followers: <span id="followers">Loading...</span></p>
+        <p>Status: <span id="live-status">Checking...</span></p>
+      </div>
+    </section>
+  </main>
+
+  <div id="loading">
+    <img src="images/allo-walk.gif" alt="Loading..." id="allo-loader">
+  </div>
+
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      document.getElementById('date').textContent = now.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
+      document.getElementById('time').textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+  </script>
+</body>
+</html>
