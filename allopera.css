@@ -207,12 +207,37 @@ body::before {
   overflow: hidden;
 }
 
-.header-banner::after {
-  content: "";
+/* Make the allo sharp and dramatic */
+.header-banner img.allo-overlay {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, rgba(0, 50, 100, 0.4), rgba(0, 0, 0, 0.3));
-  animation: shimmer 8s infinite linear;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  max-width: 400px;
+  opacity: 0.9; /* stronger presence */
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.8)); /* pop it out */
+}
+
+/* Deep night-sky background for the whole sidebar */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(180deg, #0a1528 0%, #0f2342 40%, #142d54 100%);
+  color: #f0e6c8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  color: #f6ebc5;
+}
+
+hr, .section-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, #caa857, transparent);
+  margin: 10px 0;
 }
 
 @keyframes shimmer {
