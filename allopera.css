@@ -1,35 +1,37 @@
+/* === FONT === */
 @font-face {
-  font-family: 'Bonesitos';
-  src: url('fonts/Bonesitos-Regular.ttf') format('truetype');
+  font-family: 'Bones';
+  src: url('fonts/Bones.ttf') format('truetype');
   font-display: swap;
 }
 
+/* === GLOBAL STYLES === */
 body {
   margin: 0;
   font-family: sans-serif;
-  background: linear-gradient(180deg, #0b1a2f 0%, #112b45 50%, #1b3b5c 100%);
+  background: linear-gradient(180deg, #0a1528 0%, #0f2342 40%, #142d54 100%);
   color: #f0e6c8;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+/* === HEADINGS & TEXT === */
 h1, h2, h3 {
+  font-family: 'Bones', sans-serif;
   color: #f6ebc5;
+  letter-spacing: 0.5px;
 }
 
-hr, .section-divider {
-  border: none;
-  height: 2px;
-  background: linear-gradient(90deg, #caa857, transparent);
-  margin: 10px 0;
+p, a, span {
+  color: #e8e0c5;
 }
 
 /* === TOPBAR === */
 #topbar {
-  background: linear-gradient(180deg, #223b22 0%, #2e5230 100%);
-  border-bottom: 2px solid #a07f38;
-  padding: 10px 15px;
+  background: linear-gradient(180deg, #0c1f33 0%, #112b45 80%, #0a1528 100%);
+  border-bottom: 2px solid #caa857;
+  padding: 12px 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,123 +46,63 @@ hr, .section-divider {
 #skull-icon {
   height: 50px;
   width: auto;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.6));
 }
 
 #topbar h1 {
-  font-family: 'Bonesitos', sans-serif;
-  font-size: 22px;
+  font-family: 'Bones', sans-serif;
+  font-size: 26px;
   margin: 0;
-  color: #f0e6c8;
+  color: #f6ebc5;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
 #topbar p {
   margin: 0;
   font-size: 12px;
-  color: #cfc6a2;
+  color: #d8d0b5;
 }
 
-/* === BANNER === */
-#banner {
+/* === BANNER SECTION === */
+.header-banner {
   position: relative;
-  width: 100%;
+  background: url('images/ferns.png') center/cover no-repeat;
   height: 180px;
+  border-bottom: 3px solid #caa857;
   overflow: hidden;
-  border-bottom: 2px solid #a07f38;
 }
 
-#fern-bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.75);
-}
-
-#allo-banner {
+/* Allosaurus overlay (orange transparent image) */
+.header-banner img.allo-overlay {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 60%;
-  opacity: 0.6;
-  pointer-events: none;
+  width: 80%;
+  max-width: 420px;
+  opacity: 0.95;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.9));
+}
+
+/* === SHIMMER / MOONLIGHT OVERLAY === */
+.header-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255,255,255,0.08), rgba(0,0,0,0.2));
+  mix-blend-mode: screen;
+  animation: shimmer 12s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 /* === MAIN CONTENT === */
 main {
   padding: 15px;
   flex: 1;
-}
-
-/* === SECTION HEADERS === */
-h2 {
-  font-family: 'Bonesitos', sans-serif;
-  font-size: 18px;
-  border-bottom: 2px solid #a07f38;
-  padding-bottom: 4px;
-  margin-top: 15px;
-  color: #f6eac2;
-}
-
-/* === NOTES AREA === */
-#note-area {
-  width: 100%;
-  height: 100px;
-  border-radius: 6px;
-  background-color: rgba(0, 0, 0, 0.15);
-  border: none;
-  color: #e8e0c0;
-  padding: 8px;
-  resize: none;
-}
-
-/* === TWITCH === */
-#twitch-info {
-  background-color: rgba(0, 0, 0, 0.15);
-  padding: 8px;
-  border-radius: 6px;
-}
-
-/* === LOADING ALLO === */
-#loading {
-  display: none; /* toggle visible in JS later */
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  z-index: 999;
-}
-
-#allo-loader {
-  width: 80px;
-  height: auto;
-  filter: sepia(0.8) brightness(0.9);
-}
-
-/* === LEAF SHIMMER EFFECT === */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 200, 0.12), transparent 40%),
-              radial-gradient(circle at 80% 60%, rgba(255, 255, 180, 0.1), transparent 40%),
-              radial-gradient(circle at 40% 80%, rgba(255, 240, 200, 0.1), transparent 40%);
-  animation: shimmer 15s ease-in-out infinite alternate;
-  z-index: 0;
-  mix-blend-mode: overlay;
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  50% {
-    transform: translateX(-3%) translateY(2%);
-  }
-  100% {
-    transform: translateX(2%) translateY(-3%);
-  }
+  z-index: 1;
 }
 
 /* === DINO OF THE DAY === */
@@ -176,7 +118,27 @@ body::before {
   margin-bottom: 8px;
 }
 
-/* === ALLO LOADER === */
+/* === NOTES === */
+#note-area {
+  width: 100%;
+  height: 100px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border: none;
+  color: #e8e0c0;
+  padding: 8px;
+  resize: none;
+}
+
+/* === TWITCH FOLLOWERS === */
+#twitch-info {
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 8px;
+  border-radius: 6px;
+  color: #e8e0c0;
+}
+
+/* === ALLO LOADER (GIF) === */
 #allo-loader {
   position: fixed;
   bottom: 15px;
@@ -186,6 +148,7 @@ body::before {
   pointer-events: none;
   z-index: 999;
   animation: alloIdle 6s linear infinite;
+  filter: brightness(1.1) drop-shadow(0 0 8px rgba(255, 170, 50, 0.4));
 }
 
 @keyframes alloIdle {
@@ -193,54 +156,15 @@ body::before {
   50% { transform: translateX(-5px); }
 }
 
-/* Show the loader with fade in/out */
 .show-loader {
   opacity: 1;
   transition: opacity 0.6s ease-in-out;
 }
 
-.header-banner {
-  position: relative;
-  background: url('images/ferns.png') center/cover no-repeat;
-  height: 160px;
-  border-bottom: 3px solid #caa857;
-  overflow: hidden;
-}
-
-/* Make the allo sharp and dramatic */
-.header-banner img.allo-overlay {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 80%;
-  max-width: 400px;
-  opacity: 0.9; /* stronger presence */
-  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.8)); /* pop it out */
-}
-
-/* Deep night-sky background for the whole sidebar */
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background: linear-gradient(180deg, #0a1528 0%, #0f2342 40%, #142d54 100%);
-  color: #f0e6c8;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-h1, h2, h3 {
-  color: #f6ebc5;
-}
-
-hr, .section-divider {
+/* === SECTION DIVIDERS === */
+.section-divider, hr {
   border: none;
   height: 2px;
   background: linear-gradient(90deg, #caa857, transparent);
   margin: 10px 0;
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
 }
