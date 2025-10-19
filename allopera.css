@@ -313,6 +313,22 @@ section:hover {
   font-weight: bold;
 }
 
+#twitch-info {
+  padding: 10px 15px;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+#twitch-info h2 {
+  font-family: 'Bones', sans-serif; /* your heading font */
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #f0e8d8; /* off-cream to match theme */
+  border-bottom: 2px solid #d4b84b; /* yellowish underline */
+  padding-bottom: 5px;
+}
+
 #dino-info a:hover {
   text-decoration: underline;
 }
