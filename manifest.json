@@ -3,20 +3,19 @@
   "name": "Allopera Sidebar",
   "description": "Jacob's prehistoric Opera sidebar — complete with dinosaurs, notes, and love.",
   "version": "1.0",
-  "sidebar_action": {
-    "default_title": "Allopera",
-    "default_panel": "index.html",
-    "default_icon": {
-      "16": "images/skull.png",
-      "48": "images/skull.png",
-      "128": "images/skull.png"
-    }
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["sidepanel"],
+  "action": {
+    "default_title": "Allopera"
+  },
+  "side_panel": {
+    "default_path": "index.html"
   },
   "icons": {
     "16": "images/skull.png",
     "48": "images/skull.png",
     "128": "images/skull.png"
-  },
-  "permissions": [],
-  "host_permissions": ["https://*/*", "http://*/*"]
+  }
 }
