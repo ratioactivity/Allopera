@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Bonesitos';
+  src: url('fonts/Bonesitos-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(180deg, #1a2c1a 0%, #2f4d2a 60%, #4a7b4a 100%);
+  color: #f0e6c8;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* === TOPBAR === */
+#topbar {
+  background: linear-gradient(180deg, #223b22 0%, #2e5230 100%);
+  border-bottom: 2px solid #a07f38;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#skull-icon {
+  height: 50px;
+  width: auto;
+}
+
+#topbar h1 {
+  font-family: 'Bonesitos', sans-serif;
+  font-size: 22px;
+  margin: 0;
+  color: #f0e6c8;
+}
+
+#topbar p {
+  margin: 0;
+  font-size: 12px;
+  color: #cfc6a2;
+}
+
+/* === BANNER === */
+#banner {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-bottom: 2px solid #a07f38;
+}
+
+#fern-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.75);
+}
+
+#allo-banner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* === MAIN CONTENT === */
+main {
+  padding: 15px;
+  flex: 1;
+}
+
+/* === SECTION HEADERS === */
+h2 {
+  font-family: 'Bonesitos', sans-serif;
+  font-size: 18px;
+  border-bottom: 2px solid #a07f38;
+  padding-bottom: 4px;
+  margin-top: 15px;
+  color: #f6eac2;
+}
+
+/* === NOTES AREA === */
+#note-area {
+  width: 100%;
+  height: 100px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border: none;
+  color: #e8e0c0;
+  padding: 8px;
+  resize: none;
+}
+
+/* === TWITCH === */
+#twitch-info {
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* === LOADING ALLO === */
+#loading {
+  display: none; /* toggle visible in JS later */
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+}
+
+#allo-loader {
+  width: 80px;
+  height: auto;
+  filter: sepia(0.8) brightness(0.9);
+}
