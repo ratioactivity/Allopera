@@ -216,3 +216,68 @@ section:hover {
   box-shadow: 0 0 15px rgba(202,168,87,0.4);
   transition: box-shadow 0.3s ease-in-out;
 }
+
+/* === FINAL OVERRIDE PATCH === */
+
+/* Fixes for top bar reverting to green + font not loading properly */
+@font-face {
+  font-family: 'Bones';
+  src: url('fonts/Bones.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Force background override */
+body {
+  background: linear-gradient(180deg, #0a1528 0%, #0f2342 40%, #142d54 100%) !important;
+  color: #f0e6c8 !important;
+}
+
+/* Force topbar color back to dark blue gradient */
+#topbar {
+  background: linear-gradient(180deg, #0c1f33 0%, #112b45 80%, #0a1528 100%) !important;
+  border-bottom: 2px solid #caa857 !important;
+}
+
+#topbar h1 {
+  font-family: 'Bones', sans-serif !important;
+  text-transform: uppercase !important;
+  color: #f6ebc5 !important;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* === UNIVERSAL TEXT / HEADING FIX === */
+h1, h2, h3 {
+  font-family: 'Bones', sans-serif !important;
+  text-transform: uppercase !important;
+  color: #f6ebc5 !important;
+  letter-spacing: 1px !important;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* === GOLD UNDERLINES RESTORED === */
+h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 2px;
+  margin: 6px 0 10px 0;
+  background: linear-gradient(90deg, #caa857, transparent);
+  border-radius: 2px;
+}
+
+/* === SECTION POLISH === */
+section {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(202,168,87,0.3);
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1;
+}
+
+section:hover {
+  box-shadow: 0 0 15px rgba(202,168,87,0.4);
+  transition: box-shadow 0.3s ease-in-out;
+}
