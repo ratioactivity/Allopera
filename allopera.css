@@ -153,3 +153,15 @@ body::before {
   }
 }
 
+/* === DINO OF THE DAY === */
+#dino-info {
+  text-align: center;
+  padding: 10px;
+}
+
+.dino-img {
+  max-width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  margin-bottom: 8px;
+}
