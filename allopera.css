@@ -168,3 +168,51 @@ main {
   background: linear-gradient(90deg, #caa857, transparent);
   margin: 10px 0;
 }
+
+/* === TEXT POLISH === */
+h1, h2, h3 {
+  text-transform: uppercase;
+  font-family: 'Bones', sans-serif;
+  letter-spacing: 1px;
+  color: #f6ebc5;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/* === GOLD UNDERLINE BAR === */
+h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 2px;
+  margin: 6px 0 10px 0;
+  background: linear-gradient(90deg, #caa857, transparent);
+  border-radius: 2px;
+}
+
+/* === VIGNETTE GLOW === */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.04) 0%, rgba(0,0,0,0.6) 90%);
+  z-index: 0;
+}
+
+/* === PANEL CARD STYLE === */
+section {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(202,168,87,0.3);
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1;
+}
+
+/* === SOFT AMBIENT BORDER GLOW ON HOVER === */
+section:hover {
+  box-shadow: 0 0 15px rgba(202,168,87,0.4);
+  transition: box-shadow 0.3s ease-in-out;
+}
