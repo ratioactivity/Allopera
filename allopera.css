@@ -165,3 +165,26 @@ body::before {
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
   margin-bottom: 8px;
 }
+
+/* === ALLO LOADER === */
+#allo-loader {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 100px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 999;
+  animation: alloIdle 6s linear infinite;
+}
+
+@keyframes alloIdle {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-5px); }
+}
+
+/* Show the loader with fade in/out */
+.show-loader {
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+}
