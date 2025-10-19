@@ -31,6 +31,15 @@
       </div>
     </section>
 
+      <section id="twitch">
+      <h2>Twitch Stats</h2>
+      <div id="twitch-info">
+        <p>Followers: <span id="followers">Loading...</span></p>
+        <p>Status: <span id="live-status">Checking...</span></p>
+      </div>
+    </section>
+  </main>
+
     <section id="bookmarks">
       <h2>Bookmarks</h2>
       <div id="bookmark-list"></div>
@@ -41,14 +50,14 @@
       <textarea id="note-area" placeholder="Write your thoughts..."></textarea>
     </section>
 
-    <section id="twitch">
-      <h2>Twitch Stats</h2>
-      <div id="twitch-info">
-        <p>Followers: <span id="followers">Loading...</span></p>
-        <p>Status: <span id="live-status">Checking...</span></p>
-      </div>
-    </section>
-  </main>
+    <section id="tabsaver">
+  <h2>Save Tabs</h2>
+  <div id="tab-controls">
+    <input type="text" id="session-name" placeholder="Name this session">
+    <button id="save-tabs">Save</button>
+  </div>
+  <div id="saved-sessions"></div>
+</section>
 
 <div id="loading">
   <img src="images/allo-walk.gif" alt="Loading..." id="allo-loader">
