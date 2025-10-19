@@ -281,3 +281,38 @@ section:hover {
   box-shadow: 0 0 15px rgba(202,168,87,0.4);
   transition: box-shadow 0.3s ease-in-out;
 }
+
+#dinosaur {
+  padding: 10px 15px;
+}
+
+#dinosaur h2 {
+  border-bottom: 2px solid #f0d978;
+  padding-bottom: 5px;
+  color: #f9f6e1;
+  letter-spacing: 1px;
+}
+
+#dino-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+#dino-info h3 {
+  color: #f9f6e1;
+  font-family: 'Bones', sans-serif;
+  font-size: 18px;
+}
+
+#dino-info a {
+  color: #f0d978;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#dino-info a:hover {
+  text-decoration: underline;
+}
