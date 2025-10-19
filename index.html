@@ -31,27 +31,27 @@
   </div>
 </section>
 
-      <section id="twitch">
-      <h2>Twitch Stats</h2>
-      <div id="twitch-info">
-        <p>Followers: <span id="followers">Loading...</span></p>
-        <p>Status: <span id="live-status">Checking...</span></p>
-      </div>
-    </section>
-  </main>
+  <section id="twitch-info">
+  <h2>TWITCH CHANNEL</h2>
+  <div id="twitch-stats">
+    <p>Channel: <strong>jaketheallosaurian</strong></p>
+    <p>Followers: <span id="twitch-followers">Loading…</span></p>
+    <p>Viewers (live): <span id="twitch-viewers">Loading…</span></p>
+  </div>
+</section>
 
     <section id="bookmarks">
-      <h2>Bookmarks</h2>
+      <h2>BOOKMARKS</h2>
       <div id="bookmark-list"></div>
     </section>
 
     <section id="notes">
-      <h2>Notes</h2>
+      <h2>NOTES</h2>
       <textarea id="note-area" placeholder="Write your thoughts..."></textarea>
     </section>
 
     <section id="tabsaver">
-  <h2>Save Tabs</h2>
+  <h2>SAVE TABS</h2>
   <div id="tab-controls">
     <input type="text" id="session-name" placeholder="Name this session">
     <button id="save-tabs">Save</button>
@@ -73,66 +73,6 @@
     updateDateTime();
   </script>
 
-  <script>
-const dinos = [
-  {
-    name: "Allosaurus fragilis",
-    period: "Late Jurassic",
-    diet: "Carnivore",
-    fact: "A powerful predator that could open its jaws nearly 80 degrees wide.",
-    image: "images/allo-orange.png",
-    link: "https://en.wikipedia.org/wiki/Allosaurus"
-  },
-  {
-    name: "Stegosaurus stenops",
-    period: "Late Jurassic",
-    diet: "Herbivore",
-    fact: "Used its tail spikes, or 'thagomizer,' for defense against predators.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Stegosaurus_BW.jpg",
-    link: "https://en.wikipedia.org/wiki/Stegosaurus"
-  },
-  {
-    name: "Apatosaurus ajax",
-    period: "Late Jurassic",
-    diet: "Herbivore",
-    fact: "Could grow over 70 feet long and likely used its tail as a whip.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/15/Apatosaurus_BW.jpg",
-    link: "https://en.wikipedia.org/wiki/Apatosaurus"
-  },
-  {
-    name: "Ceratosaurus nasicornis",
-    period: "Late Jurassic",
-    diet: "Carnivore",
-    fact: "Had a prominent nasal horn, but it was likely for display, not combat.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Ceratosaurus_BW.jpg",
-    link: "https://en.wikipedia.org/wiki/Ceratosaurus"
-  },
-  {
-    name: "Brachiosaurus altithorax",
-    period: "Late Jurassic",
-    diet: "Herbivore",
-    fact: "Its long neck allowed it to reach vegetation other dinosaurs couldn’t.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Brachiosaurus_BW.jpg",
-    link: "https://en.wikipedia.org/wiki/Brachiosaurus"
-  }
-];
-
-// Pick a dino of the day (changes once per day)
-const today = new Date().getDate();
-const dinoOfDay = dinos[today % dinos.length];
-
-// Display it
-const dinoDiv = document.getElementById("dino-info");
-dinoDiv.innerHTML = `
-  <img src="${dinoOfDay.image}" alt="${dinoOfDay.name}" class="dino-img">
-  <h3>${dinoOfDay.name}</h3>
-  <p><strong>Period:</strong> ${dinoOfDay.period}</p>
-  <p><strong>Diet:</strong> ${dinoOfDay.diet}</p>
-  <p>${dinoOfDay.fact}</p>
-  <a href="${dinoOfDay.link}" target="_blank">Learn more on Wikipedia</a>
-`;
-</script>
-
 <script>
 // hey jacob — if you’re poking around in here, i love you <3
 // from emma. you're my favorite dinosaur.
@@ -148,6 +88,8 @@ showLoader();
 </script>
 
   <script src="sidebar.js"></script>
+
+  <script src="dino.js"></script>
   
 </body>
 </html>
