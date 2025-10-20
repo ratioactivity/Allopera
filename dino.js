@@ -62,7 +62,7 @@ const dinoList = [
   { name: "CAUDIPTERYX", fact: "A peacock-like feathered dinosaur with a fan tail.", wiki: "https://en.wikipedia.org/wiki/Caudipteryx" },
   { name: "CEDARPELTA", fact: "A large, primitive ankylosaur armored from head to tail.", wiki: "https://en.wikipedia.org/wiki/Cedarpelta" },
   { name: "CENTROSAURUS", fact: "A horned dinosaur with a massive nasal horn and spiked frill.", wiki: "https://en.wikipedia.org/wiki/Centrosaurus" },
-    { name: "CERATOSAURUS", fact: "A horned carnivore with blade-like teeth and a single nasal horn used for display.", wiki: "https://en.wikipedia.org/wiki/Ceratosaurus" },
+  { name: "CERATOSAURUS", fact: "A horned carnivore with blade-like teeth and a single nasal horn used for display.", wiki: "https://en.wikipedia.org/wiki/Ceratosaurus" },
   { name: "CETIOSAURISCUS", fact: "A Middle Jurassic sauropod once mistaken for a sea monster.", wiki: "https://en.wikipedia.org/wiki/Cetiosauriscus" },
   { name: "CETIOSAURUS", fact: "Nicknamed the 'whale lizard' for its massive size and river habitat.", wiki: "https://en.wikipedia.org/wiki/Cetiosaurus" },
   { name: "CHAOYANGSAURUS", fact: "An early ceratopsian from China, showing the beginnings of the horned dinosaur lineage.", wiki: "https://en.wikipedia.org/wiki/Chaoyangsaurus" },
@@ -98,7 +98,7 @@ const dinoList = [
   { name: "DRYOSAURUS", fact: "A small, fast herbivore with strong hind legs for bounding through forests.", wiki: "https://en.wikipedia.org/wiki/Dryosaurus" },
   { name: "DRYPTOSAURUS", fact: "An early tyrannosauroid with long arms and wicked claws.", wiki: "https://en.wikipedia.org/wiki/Dryptosaurus" },
   { name: "DUBREUILLOSAURUS", fact: "A medium-sized European predator with a long, low skull.", wiki: "https://en.wikipedia.org/wiki/Dubreuillosaurus" },
-    { name: "EDMONTONIA", fact: "A tank-like ankylosaur covered in bony plates and shoulder spikes.", wiki: "https://en.wikipedia.org/wiki/Edmontonia" },
+  { name: "EDMONTONIA", fact: "A tank-like ankylosaur covered in bony plates and shoulder spikes.", wiki: "https://en.wikipedia.org/wiki/Edmontonia" },
   { name: "EDMONTOSAURUS", fact: "A large duck-billed herbivore from North America’s cold plains.", wiki: "https://en.wikipedia.org/wiki/Edmontosaurus" },
   { name: "EINIOSAURUS", fact: "A horned dinosaur with a forward-curving nose horn, like a unicorn with bad aim.", wiki: "https://en.wikipedia.org/wiki/Einiosaurus" },
   { name: "ELAPHROSAURUS", fact: "A lightweight carnivore whose name means 'light-footed lizard.'", wiki: "https://en.wikipedia.org/wiki/Elaphrosaurus" },
@@ -245,7 +245,7 @@ const dinoList = [
   { name: "PSITTACOSAURUS", fact: "A parrot-beaked herbivore that walked on two legs — ugly enough to be punted.", wiki: "https://en.wikipedia.org/wiki/Psittacosaurus" },
   { name: "PUERTASAURUS", fact: "A massive titanosaur known from Argentina — rivaled Argentinosaurus in size.", wiki: "https://en.wikipedia.org/wiki/Puertasaurus" },
   { name: "PYRORAPTOR", fact: "A fire-named raptor discovered after a forest blaze — fast, fierce, and fabulous.", wiki: "https://en.wikipedia.org/wiki/Pyroraptor" },
-    { name: "QUAESITOSAURUS", fact: "A long-necked titanosaur from Mongolia with a weird, slightly squat skull.", wiki: "https://en.wikipedia.org/wiki/Quaesitosaurus" },
+  { name: "QUAESITOSAURUS", fact: "A long-necked titanosaur from Mongolia with a weird, slightly squat skull.", wiki: "https://en.wikipedia.org/wiki/Quaesitosaurus" },
   { name: "RAJASAURUS", fact: "A robust Indian theropod with a deep skull and muscular build.", wiki: "https://en.wikipedia.org/wiki/Rajasaurus" },
   { name: "REBBACHISAURUS", fact: "A sauropod with distinctive low neural spines and unusual teeth adapted to stripping plants.", wiki: "https://en.wikipedia.org/wiki/Rebbachisaurus" },
   { name: "RHABDODON", fact: "A stocky European herbivore common in Late Cretaceous landscapes.", wiki: "https://en.wikipedia.org/wiki/Rhabdodon" },
@@ -326,7 +326,8 @@ const dinoList = [
   { name: "YUTYRANNUS", fact: "A feathered tyrannosauroid demonstrating that big predators could be fuzzy — possibly used display feathers.", wiki: "https://en.wikipedia.org/wiki/Yutyrannus" },
   { name: "ZALMOXES", fact: "A Romanian hadrosauroid with a robust build and interesting skull anatomy.", wiki: "https://en.wikipedia.org/wiki/Zalmoxes" },
   { name: "ZEPHYROSAURUS", fact: "A small, nimble ornithopod known from fragmentary remains in North America.", wiki: "https://en.wikipedia.org/wiki/Zephyrosaurus" },
-  { name: "ZUNICERATOPS", fact: "A small chasmosaurine ceratopsian notable as one of North America’s earliest horned dinosaurs.", wiki: "https://en.wikipedia.org/wiki/Zuniceratops" }
+  { name: "ZUNICERATOPS", fact: "A small chasmosaurine ceratopsian notable as one of North America’s earliest horned dinosaurs.", wiki: "https://en.wikipedia.org/wiki/Zuniceratops" },
+  { name: "ZHUCHENGTYRANNUS", fact: "The largest tyrannosaurid in China. It's name means Zhucheng Tyrant, and it has one genus, Magnus.", wiki: "https://en.wikipedia.org/wiki/Zhuchengtyrannus"}
 ];
 
 // === Dino Logic ===
